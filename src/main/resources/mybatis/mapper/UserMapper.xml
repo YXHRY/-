@@ -1,0 +1,18 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.spring_boot_admin.mapper.UserMapper">
+<!--    public User getUser(String account);-->
+    <select id="getUser" resultType="com.example.spring_boot_admin.bean.User">
+        select * from  user where  account=#{account}
+    </select>
+</mapper>
+<!--Mapping接口绑定xml-->
+        <!--配置mybatis规则-->
+        <!--        mybatis:-->
+        <!--        config-location: classpath:mybatis/mybatis-config.xml  #全局配置文件位置-->
+        <!--        mapper-locations: classpath:mybatis/mapper/*.xml  #sql映射文件位置-->
+
+        <!--        Mapper接口  绑定Xml-->

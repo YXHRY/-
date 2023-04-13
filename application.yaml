@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/javaweb?serverTimezone=UTC
+    username: root
+    password: a1472580369
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      filters: stat,wall #监控防火墙功能
+      aop-patterns: com.example.spring_boot_admin.*
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: admin
+        resetEnable: false
+      web-stat-filter:
+        enabled: true
+        urlPattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      filter:
+        stat:
+          slow-sql-millis: 1000
+          logSlowSql: true
+          enabled: true
+        wall:
+          enabled: true
+
+#配置mybatis规则
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml #全局配置文件位置
+  mapper-lications: classpath:mybatis/mapper/*.xml #sql映射文件位置

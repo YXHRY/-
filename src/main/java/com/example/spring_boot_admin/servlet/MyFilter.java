@@ -1,0 +1,29 @@
+package com.example.spring_boot_admin.servlet;
+
+import lombok.extern.slf4j.Slf4j;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import java.io.IOException;
+
+
+@Slf4j
+//@WebFilter(urlPatterns = {"/css/*"})
+//@WebFilter()
+public class MyFilter implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+        log.info("f初始化");
+    }
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        log.info("f工作");
+    }
+
+    @Override
+    public void destroy() {
+        log.info("f销毁");
+    }
+}

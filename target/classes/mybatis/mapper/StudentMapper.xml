@@ -1,0 +1,10 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.spring_boot_admin.mapper.StudentMapper">
+<!--    <insert id="insert" useGenerateKeys="true" keyProperty="account">//使用自增的主键，主键名叫account-->
+<!--        insert into student values(#{account},#{name},#{age})-->
+<!--    </insert>-->
+</mapper>
